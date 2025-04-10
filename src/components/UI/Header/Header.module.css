@@ -2,9 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 15px 25px 15px;
 }
 
-.list-links {
+.listLinks {
+  margin: 0;
   list-style: none;
   padding: 0;
   display: flex;

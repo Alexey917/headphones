@@ -1,0 +1,36 @@
+.footerLinks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  columns: 2 auto;
+}
+
+.footerLinks > li {
+  margin-bottom: 10px;
+}
+
+.footerLinks > li:last-child {
+  margin-top: 35px;
+}
+
+.languageSettings {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footerLink {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.lang {
+  width: 20px;
+  height: 20px;
+  fill: #838383;
+}
+

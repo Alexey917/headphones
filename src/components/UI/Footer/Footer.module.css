@@ -1,0 +1,28 @@
+.nav {
+  padding: 29px 27px 32px 27px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 30px 30px 0 0;
+  background-color: #fff;
+}
+
+.socialList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.vk {
+  width: 30px;
+  height: 21px;
+  fill: #101010;
+}
+
+.tg, .whatsapp {
+  width: 30px;
+  height: 30px;
+  fill: #101010;
+}
