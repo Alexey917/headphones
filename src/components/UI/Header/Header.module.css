@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+
+.favorites {
+  width: 22px;
+  height: 20px;
+  fill: #838383;
+}
+
+.basket {
+  width: 23px;
+  height: 23px;
+  fill: #838383;
+}
