@@ -1,8 +1,8 @@
-import { FooterLinks } from "../FooterLinks/FooterLinks"
-import { Logo } from "../Logo/Logo"
-import vk from "../../../assets/sprite.svg";
-import tg from "../../../assets/sprite.svg";
-import whatsapp from "../../../assets/sprite.svg";
+import { FooterLinks } from "../UI/FooterLinks/FooterLinks"
+import { Logo } from "../UI/Logo/Logo"
+import vk from "../../assets/sprite.svg";
+import tg from "../../assets/sprite.svg";
+import whatsapp from "../../assets/sprite.svg";
 import classes from "./Footer.module.css";
 
 export const Footer = () => {

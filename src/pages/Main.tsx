@@ -1,10 +1,12 @@
-import { Headphones } from "../components/UI/Headphones/Headphones";
-import { headphones, wirelessHeadphones } from "../data";
+import { Section } from "../components/Section/Section";
+import { headphones, wirelessHeadphones } from "../data/data";
 
 export const Main = () => {
   return (
     <main>
-      <Headphones title='Наушники' goods={headphones} />
+      <Section title="Наушники" goods={headphones} />
+      <Section goods={headphones} />
+      <Section title="Беспроводные наушники" goods={wirelessHeadphones} />
     </main>
-  )
-}
+  );
+};

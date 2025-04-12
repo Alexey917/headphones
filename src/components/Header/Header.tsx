@@ -1,15 +1,15 @@
-import { Logo } from "../Logo/Logo"
+import { Logo } from "../UI/Logo/Logo"
 import { Link } from "react-router-dom";
 import classes from "./Header.module.css";
 
-import favorites from "../../../assets/sprite.svg";
-import basket from "../../../assets/sprite.svg";
+import favorites from "../../assets/sprite.svg";
+import basket from "../../assets/sprite.svg";
 
 
 
 export const Header = () => {
   return (
-    <header>
+    <header className={classes.header}>
       <nav className={classes.nav}>
         <Logo />
         <ul className={classes.listLinks}>
