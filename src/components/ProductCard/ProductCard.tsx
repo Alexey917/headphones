@@ -5,26 +5,29 @@ import { Button } from "../UI/Button/Button"
 import { useState } from "react"
 
 interface IProductCard {
-  good: IGoods
-  showOldPrice: boolean
+  good: IGoods;
+  showOldPrice: boolean;
 }
 
-export const ProductCard:React.FC<IProductCard> = ({ good, showOldPrice}) => {
+export const ProductCard: React.FC<IProductCard> = ({ good, showOldPrice }) => {
   const [purchases, setPurchases] = useState<IGoods[]>([]);
 
-  
   const addBasket = (): void => {
-    const buy = [...purchases, good]
-    sessionStorage.setItem(good.img, JSON.stringify(good))
-    setPurchases(buy)
-    console.log(Math.random())
-  }
-  
+    const buy = [...purchases, good];
+    sessionStorage.setItem(good.img, JSON.stringify(good));
+    setPurchases(buy);
+  };
+
   return (
     <div className={classes.card}>
-      <img src={good.img} alt="Картинка товара"  className={good.title === 'BOROFONE BO4' ? classes.borofone : classes.imgAirPods} />
+      <img
+        src={good.img}
+        alt="Картинка товара"
+        className={
+          good.title === "BOROFONE BO4" ? classes.borofone : classes.imgAirPods
+        }
+      />
       <div className={classes.info}>
-
         <div className={classes.titleAndRate}>
           <p className={classes.cardTitle}>{good.title}</p>
           <div className={classes.rateWrapper}>
@@ -36,14 +39,23 @@ export const ProductCard:React.FC<IProductCard> = ({ good, showOldPrice}) => {
         </div>
 
         <div className={classes.priceAndBuy}>
-          <div className={showOldPrice ? classes.oldPriceWrapper : classes.priceWrapper}>
-            <p className={classes.cardPrice}>{good.price}</p>
-            {showOldPrice ? <p className={classes.cardOldPrice}>{good.oldPrice}</p> : ""}
+          <div
+            className={
+              showOldPrice ? classes.oldPriceWrapper : classes.priceWrapper
+            }
+          >
+            <p className={classes.cardPrice}>{good.price} &#8381;</p>
+            {showOldPrice ? (
+              <p className={good.oldPrice ? classes.cardOldPrice : classes.mb}>
+                {good.oldPrice}
+              </p>
+            ) : (
+              ""
+            )}
           </div>
           <Button onClick={addBasket}>Купить</Button>
         </div>
-
       </div>
     </div>
   );
-}
+};

@@ -7,8 +7,8 @@ interface IButton {
 
 export const Button: React.FC<IButton> = ({ children, onClick }) => {
   return (
-    <button className={classes.btn} onClick={onClick}>
+    <button type="button" className={classes.btn} onClick={onClick}>
       <span className={classes.textBtn}>{children}</span>
-    </button>  
-  ) 
+    </button>
+  ); 
 }

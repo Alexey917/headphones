@@ -1,0 +1,110 @@
+.purchase {
+  display: flex;
+  justify-content: space-between;
+  width: 633px;
+  height: 218px;
+  padding: 18px 28px 15px 19px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.imgWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.img {
+  width: 147px;
+  height: 136px;
+}
+
+.btnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btnDel {
+  padding: 0;
+  background-color: #fff;
+  border: none;
+}
+
+.del {
+  width: 20px;
+  height: 17px;
+  text-align: right;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+  color: #1C1C27;
+}
+
+.price {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  color: #AAAAAA;
+}
+
+.totalPrice {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  color: #1C1C27;
+}
+
+.titleWrapper {
+  align-self: center;
+  margin-left: 24px;
+  flex-grow: 2;
+}
+
+.priceWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.btnQuantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: #FFCE7F;
+  cursor: pointer;
+}
+
+.quantity {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 17px;
+  color: #000000;
+}
+
+.plus {
+  width: 14px;
+  height: 14px;
+}
+
+.minus {
+  width: 14px;
+  height: 2px;
+}

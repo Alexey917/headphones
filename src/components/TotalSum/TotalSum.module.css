@@ -1,0 +1,44 @@
+.totalWrapper {
+  position: relative;
+  width: 349px;
+  height: 114px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.priceWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 21px 16px 74px 21px;
+}
+
+.text{
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  color: #000000;
+}
+
+.btn {
+  position: absolute;
+  width: inherit;
+  height: 65px;
+  bottom: 0;
+  margin-bottom: -6px;
+  border-radius: 20px;
+  border: none;
+  background-color: #101010;
+  cursor: pointer;
+}
+
+.btnText {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 17px;
+  color: #ffffff;
+}

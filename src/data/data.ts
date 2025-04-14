@@ -9,7 +9,7 @@ export interface IGoods {
   img: string;
   title: string;
   price: number;
-  oldPrice?: number;
+  oldPrice?: string;
   rate: number;
 }
 
@@ -18,7 +18,7 @@ export const headphones: IGoods[] = [
     img: AppleBYZS8521,
     title: "Apple BYZ S8521",
     price: 2927,
-    oldPrice: 3527,
+    oldPrice: "3527 ₽",
     rate: 4.7,
   },
   {

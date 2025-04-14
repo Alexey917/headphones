@@ -71,8 +71,13 @@
   color: #FFA542;
 }
 
+.mb {
+  margin-bottom: 16px;
+}
+
 .cardOldPrice {
   margin: 0;
+  margin-right: 7px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -81,6 +86,7 @@
   text-decoration: line-through;
   color: #FFCE7F;
 }
+
 
 .priceAndBuy {
   display: inline-flex;
@@ -99,4 +105,6 @@
   width: 23px;
   height: 22px;
 }
+
+
 
