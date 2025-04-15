@@ -12,3 +12,9 @@
   font-size: 17px;
   color: #000000;
 }
+
+@media (min-width: 992px) {
+  .btn:hover .textBtn {
+    color: #FFA542;
+  }
+}

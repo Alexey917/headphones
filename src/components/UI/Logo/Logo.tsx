@@ -1,10 +1,15 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import classes from "./Logo.module.css";
 
 export const Logo = () => {
+  const navigate = useNavigate();
+  const goBack = () => navigate(-1);
+
   return (
     <>
-      <Link to="/" className={classes.logo}>QPICK</Link>  
+      <button type="button" className={classes.logo} onClick={() => goBack()}>
+        QPICK
+      </button>
     </>
-  )
-}
+  );
+};

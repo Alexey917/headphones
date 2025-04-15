@@ -3,6 +3,8 @@ import classes from "./ProductCard.module.css"
 import star from "../../assets/sprite.svg"
 import { Button } from "../UI/Button/Button"
 import { useState } from "react"
+import { useContext } from "react";
+import { QuantityPurchasesContext } from "../../context/QuantityPurchasesContext";
 
 interface IProductCard {
   good: IGoods;
@@ -11,11 +13,18 @@ interface IProductCard {
 
 export const ProductCard: React.FC<IProductCard> = ({ good, showOldPrice }) => {
   const [purchases, setPurchases] = useState<IGoods[]>([]);
+  const { quantity, setQuantity } = useContext(QuantityPurchasesContext);
 
   const addBasket = (): void => {
+    if (sessionStorage.getItem(`purchases_${good.img}`)) {
+      alert("Товар уже в корзине!");
+      return;
+    }
+
     const buy = [...purchases, good];
-    sessionStorage.setItem(good.img, JSON.stringify(good));
+    sessionStorage.setItem(`purchases_${good.img}`, JSON.stringify(good));
     setPurchases(buy);
+    setQuantity(quantity + 1);
   };
 
   return (

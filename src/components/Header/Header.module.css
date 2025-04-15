@@ -31,3 +31,40 @@
   height: 23px;
   fill: #838383;
 }
+
+.favoritesRelative, .basketRelative {
+  position: relative;
+}
+
+.quantityFavorites, .quantityBasket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -6px;
+  left: 14px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #FFA542;
+}
+
+.quantity {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+
+@media (min-width: 992px) {
+  .favorites:hover, .basket:hover{
+    transform: translateY(-5px);
+    fill: #FFA542;
+  }
+
+  .favoritesRelative:hover .quantityFavorites, .basketRelative:hover .quantityBasket {
+    transform: translateY(-5px);
+  }
+}

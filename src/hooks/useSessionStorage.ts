@@ -9,8 +9,7 @@ export const useSessionStorage = <T>(key: string | null): T | null => {
     try {
       let data = sessionStorage.getItem(key);
       if(data) {
-        setValue(JSON.parse(data))
-        console.log(data)
+        setValue(JSON.parse(data));
       } 
     } catch(error) {
       console.error('Ошибка чтения из sessionStorage:', error)

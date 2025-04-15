@@ -4,7 +4,7 @@ import { TotalSum } from "../components/TotalSum/TotalSum";
 
 export const Basket = () => {
   return (
-    <main>
+    <main style={{ marginBottom: "auto" }}>
       <Section title="Корзина" purchases={Purchases} component={TotalSum} />
     </main>
   );

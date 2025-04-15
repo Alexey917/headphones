@@ -8,6 +8,12 @@
   gap: 30px;
 }
 
+.purchasesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .title {
   margin: 0;
   margin-bottom: 20px;

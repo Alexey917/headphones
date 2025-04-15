@@ -42,3 +42,11 @@
   font-size: 17px;
   color: #ffffff;
 }
+
+@media (min-width: 992px) {
+  .btn:hover {
+    background-color: #FFA542;
+    border: 1px solid #FFA542;
+    transition: 0.5s;
+  }
+}

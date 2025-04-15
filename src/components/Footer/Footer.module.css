@@ -20,10 +20,19 @@
   width: 30px;
   height: 21px;
   fill: #101010;
+  cursor: pointer;
 }
 
 .tg, .whatsapp {
   width: 30px;
   height: 30px;
   fill: #101010;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .vk:hover, .whatsapp:hover, .tg:hover{
+    transform: translateY(-5px);
+    fill: #FFA542;
+  }
 }
