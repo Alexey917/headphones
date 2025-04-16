@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import classes from "./FooterLinks.module.css";
 import lang from "../../../assets/sprite.svg";
 import { useState } from "react";
@@ -19,24 +19,52 @@ export const FooterLinks: React.FC<ILang> = ({ ru, eng, kaz }) => {
   return (
     <ul className={classes.footerLinks}>
       <li>
-        <Link to="favorites" className={classes.footerLink}>
+        <NavLink
+          to="favorites"
+          className={({ isActive }) =>
+            isActive
+              ? `${classes.active} ${classes.footerLink}`
+              : classes.footerLink
+          }
+        >
           Избранное
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link to="basket" className={classes.footerLink}>
+        <NavLink
+          to="basket"
+          className={({ isActive }) =>
+            isActive
+              ? `${classes.active} ${classes.footerLink}`
+              : classes.footerLink
+          }
+        >
           Корзина
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link to="contacts" className={classes.footerLink}>
+        <NavLink
+          to="contacts"
+          className={({ isActive }) =>
+            isActive
+              ? `${classes.active} ${classes.footerLink}`
+              : classes.footerLink
+          }
+        >
           Контакты
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link to="service" className={classes.footerLink}>
+        <NavLink
+          to="service"
+          className={({ isActive }) =>
+            isActive
+              ? `${classes.active} ${classes.footerLink}`
+              : classes.footerLink
+          }
+        >
           Условия сервиса
-        </Link>
+        </NavLink>
       </li>
       <li>
         <ul className={classes.languageSettings}>
