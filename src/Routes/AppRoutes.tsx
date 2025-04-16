@@ -7,7 +7,6 @@ import { QuantityPurchasesContext } from "../context/QuantityPurchasesContext";
 import { Favorites } from "../pages/Favorites";
 import { Contacts } from "../pages/Contacts";
 import { Service } from "../pages/Service";
-import { IGoods } from "../data/data";
 import { PageNotFound } from "../pages/PageNotFound";
 
 export const AppRoutes = () => {
@@ -18,12 +17,8 @@ export const AppRoutes = () => {
     return basket.length;
   });
 
-  const [total, setTotal] = useState<IGoods[]>([]);
-
   return (
-    <QuantityPurchasesContext.Provider
-      value={{ quantity, setQuantity, total, setTotal }}
-    >
+    <QuantityPurchasesContext.Provider value={{ quantity, setQuantity }}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />

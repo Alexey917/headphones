@@ -1,12 +1,10 @@
 import classes from "./TotalSum.module.css"
 
 interface ITotalSum {
-  sumArr: number[];
+  total: number;
 }
 
-export const TotalSum: React.FC<ITotalSum> = ({ sumArr }) => {
-  const total = sumArr.reduce((acc, item) => acc + item, 0);
-
+export const TotalSum: React.FC<ITotalSum> = ({ total }) => {
   return (
     <div className={classes.totalWrapper}>
       <div className={classes.priceWrapper}>

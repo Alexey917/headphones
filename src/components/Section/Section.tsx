@@ -1,9 +1,11 @@
 import classes from "./Section.module.css";
 import  { IGoods }  from "../../data/data";
 import { ProductCard } from "../ProductCard/ProductCard";
-import { ElementType, useState } from "react";
+import { ElementType, useState, useEffect } from "react";
 import { Purchases } from "../Purchases/Purchases";
 import { TotalSum } from "../TotalSum/TotalSum";
+import { useContext } from "react";
+import { QuantityPurchasesContext } from "../../context/QuantityPurchasesContext";
 
 interface IMainSection {
   title?: string;
@@ -27,12 +29,38 @@ export const Section: React.FC<ISection> = ({
   purchases,
   component,
 }) => {
+  const { quantity, setQuantity } = useContext(QuantityPurchasesContext);
   const [sumArr, setSumArr] = useState<number[]>([]);
+  const [sessionKeys, setSessionKeys] = useState<string[]>(
+    Object.keys(sessionStorage)
+  );
+  const [total, setTotal] = useState<number>(0);
 
   const arraySum = (index: number) => (newSum: number) => {
     setSumArr((prev) => {
       const newArr = [...prev];
       newArr[index] = newSum;
+      return newArr;
+    });
+  };
+
+  useEffect(() => {
+    setTotal(sumArr.reduce((acc, item) => acc + (item || 0), 0));
+  }, [sumArr]); // Пересчитываем при каждом изменении sumArr
+
+  const deletePurchases = (key: string, index: number) => {
+    const delKey = Object.keys(sessionStorage).filter(
+      (storageKey) => storageKey !== key
+    );
+
+    setSessionKeys(delKey);
+    setQuantity(quantity - 1);
+    sessionStorage.removeItem(key);
+    setTotal(sumArr.reduce((acc, item) => acc + item, 0));
+
+    setSumArr((prev) => {
+      const newArr = [...prev];
+      newArr.splice(index, 1); // Удаляем элемент по индексу
       return newArr;
     });
   };
@@ -52,16 +80,18 @@ export const Section: React.FC<ISection> = ({
 
         <div className={classes.purchasesWrapper}>
           {purchases &&
-            Object.keys(sessionStorage).map((storageKey, index) => (
+            sessionKeys.map((storageKey, index) => (
               <Purchases
                 key={storageKey}
                 purchase={storageKey}
                 onChangeSum={arraySum(index)}
+                deletePurchases={deletePurchases}
+                index={index}
               />
             ))}
         </div>
 
-        {component && <TotalSum sumArr={sumArr} />}
+        {component && <TotalSum total={total} />}
       </div>
     </section>
   );
