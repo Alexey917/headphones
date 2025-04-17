@@ -21,19 +21,6 @@
   font-size: 15px;
   color: #000000;
 }
-
-.btn {
-  position: absolute;
-  width: inherit;
-  height: 65px;
-  bottom: 0;
-  margin-bottom: -6px;
-  border-radius: 20px;
-  border: none;
-  background-color: #101010;
-  cursor: pointer;
-}
-
 .btnText {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -43,10 +30,3 @@
   color: #ffffff;
 }
 
-@media (min-width: 992px) {
-  .btn:hover {
-    background-color: #FFA542;
-    border: 1px solid #FFA542;
-    transition: 0.5s;
-  }
-}

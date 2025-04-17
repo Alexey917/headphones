@@ -8,6 +8,7 @@ import { Contacts } from "../pages/Contacts";
 import { Service } from "../pages/Service";
 import { PageNotFound } from "../pages/PageNotFound";
 import { Pay } from "../pages/Pay";
+import { Success } from "../pages/Success";
 import { FormOfPayment } from "../components/FormOfPayment/FormOfPayment";
 import { formDataAction } from "../utils/payAction";
 
@@ -27,23 +28,9 @@ export const router = createBrowserRouter([
         action: formDataAction,
         children: [{ path: "formOfPayment", element: <FormOfPayment /> }],
       },
+      { path: "success", element: <Success /> },
       { path: "*", element: <PageNotFound /> },
     ],
   },
 ]);
 
-// export const router = createBrowserRouter(
-//   createRoutesFromElements(
-//     <Routes>
-//       <Route path="/" element={<Layout />}>
-//         <Route index element={<Main />} />
-//         <Route path="basket" element={<Basket />} />
-//         <Route path="favorites" element={<Favorites />} />
-//         <Route path="contacts" element={<Contacts />} />
-//         <Route path="service" element={<Service />} />
-//         <Route path="pay" element={<Pay />} />
-//         <Route path="*" element={<PageNotFound />} />
-//       </Route>
-//     </Routes>
-//   )
-// );

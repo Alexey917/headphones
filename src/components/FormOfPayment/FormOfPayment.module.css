@@ -1,6 +1,7 @@
 .form {
   width: 349px;
   height: 400px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,3 +10,48 @@
   border-radius: 30px;
   background-color: #fff;
 }
+
+.fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.input {
+  padding: 0 10px;
+  margin-top: 10px;
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #1C1C27;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  background-color: #fff;
+  color: #1C1C27;
+  outline: transparent;
+}
+
+.input:focus {
+  border: 2px solid #FFCE7F;
+}
+
+.label {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  color: #1C1C27;
+}
+
+.btnText {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 17px;
+  color: #ffffff;
+}
+

@@ -3,6 +3,7 @@ import del from "../../assets/sprite.svg"
 import minus from "../../assets/sprite.svg"
 import plus from "../../assets/sprite.svg"
 import { IGoods } from "../../data/data";
+import { ISpecifications } from "../../data/data";
 import { useSessionStorage } from "../../hooks/useSessionStorage";
 import { useMemo, useEffect } from "react";
 import { useSum } from "../../hooks/useSum";
@@ -20,7 +21,7 @@ export const Purchases: React.FC<IPurchases> = ({
   deletePurchases,
   index,
 }) => {
-  let data = useSessionStorage<IGoods>(purchase);
+  let data = useSessionStorage<IGoods<ISpecifications>>(purchase);
 
   const { increase, decrease, quantity } = useSum();
 

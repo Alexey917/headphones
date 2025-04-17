@@ -1,5 +1,6 @@
 import classes from "./Section.module.css";
 import  { IGoods }  from "../../data/data";
+import { ISpecifications } from "../../data/data";
 import { ProductCard } from "../ProductCard/ProductCard";
 import { ElementType, useState, useEffect } from "react";
 import { Purchases } from "../Purchases/Purchases";
@@ -9,7 +10,7 @@ import { QuantityPurchasesContext } from "../../context/QuantityPurchasesContext
 
 interface IMainSection {
   title?: string;
-  goods?: IGoods[];
+  goods?: IGoods<ISpecifications>[];
   purchases?: never;
   component?: never;
 }
