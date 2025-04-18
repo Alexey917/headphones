@@ -1,16 +1,16 @@
 .totalWrapper {
   position: relative;
-  width: 349px;
-  height: 114px;
+  width: 21.8125rem;
+  height: 7.125rem;
   background-color: #fff;
-  border-radius: 30px;
+  border-radius: 1.875rem;
 }
 
 .priceWrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 21px 16px 74px 21px;
+  padding: 1.3125rem 1rem 4.625rem 1.3125rem;
 }
 
 .text{
@@ -18,7 +18,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 15px;
+  font-size: .9375rem;
   color: #000000;
 }
 .btnText {
@@ -26,7 +26,36 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 17px;
+  font-size: 1.0625rem;
   color: #ffffff;
 }
 
+@media (max-width: 1280px) {
+  .totalWrapper {
+    width: 20.8125rem; 
+  }
+}
+
+@media (max-width: 992px) {
+  .totalWrapper {
+    width: 39.5625rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .totalWrapper {
+    width: 36rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .totalWrapper {
+    width: 23.4375rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .totalWrapper {
+    width: 20rem;
+  }
+}

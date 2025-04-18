@@ -1,35 +1,36 @@
 .card {
-  padding: 15px 18px 27px 22px;
-  width: 350px;
-  height: 407px;
-  border-radius: 30px;
+  padding: .9375rem 1.125rem 1.6875rem 1.375rem;
+  width: 21.875rem;
+  height: 25.4375rem;
+  border-radius: 1.875rem;
   background-color: #fff;
+  flex-shrink: 0;
 }
 
 
 .imgAirPods {
   position: relative;
   left: 50%;
-  width: 220px;
-  height: 237px;
-  margin-bottom: 54px;
-  margin-left: -110px;
+  width: 13.75rem;
+  height: 14.8125rem;
+  margin-bottom: 3.375rem;
+  margin-left: -6.875rem;
 }
 
 .card:last-child > .imgAirPods {
-  height: 177px;
-  margin-top: 42px;
-  margin-bottom: 72px;
+  height: 11.0625rem;
+  margin-top: 2.625rem;
+  margin-bottom: 4.5rem;
 }
 
 .borofone {
   position: relative;
   left: 50%;
-  width: 201px;
-  height: 240px;
-  margin-top: 12px;
-  margin-bottom: 39px;
-  margin-left: -100.5px;
+  width: 12.5625rem;
+  height: 15rem;
+  margin-top: .75rem;
+  margin-bottom: 2.4375rem;
+  margin-left: -6.2813rem;
 }
 
 .info {
@@ -38,11 +39,11 @@
 }
 
 .cardTitle {
-  margin: 0 0 25px 0;
+  margin: 0 0 1.5625rem 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 17px;
+  font-size: 1.0625rem;
   color: #1C1C27;
 }
 
@@ -51,14 +52,14 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 17px;
+  font-size: 1.0625rem;
   color: #838383;
 }
 
 
 .rateWrapper {
   display: flex;
-  gap: 10px;
+  gap: .625rem;
 }
 
 .cardPrice {
@@ -66,22 +67,22 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 17px;
+  font-size: 1.0625rem;
   text-align: right;
   color: #FFA542;
 }
 
 .mb {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .cardOldPrice {
   margin: 0;
-  margin-right: 7px;
+  margin-right: .4375rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 13px;
+  font-size: .8125rem;
   text-align: right;
   text-decoration: line-through;
   color: #FFCE7F;
@@ -94,16 +95,16 @@
 }
 
 .priceWrapper {
-  margin-bottom: 26px;
+  margin-bottom: 1.625rem;
 }
 
 .oldPriceWrapper {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .star, .details {
-  width: 23px;
-  height: 22px;
+  width: 1.4375rem;
+  height: 1.375rem;
 }
 
 .details {
@@ -113,8 +114,8 @@
 .btnDetails {
   margin: 0;
   padding: 0;
-  width: 23px;
-  height: 22px;
+  width: 1.4375rem;
+  height: 1.375rem;
   border: none;
   background-color: #fff;
   cursor: pointer;
@@ -122,7 +123,31 @@
 
 @media (min-width: 992px) {
   .details:hover {
-    transform: translateY(-5px);
+    transform: translateY(-.3125rem);
     fill: #FFCE7F;
+  }
+}
+
+@media (max-width: 1280px) {
+  .card {
+    width: 19.5625rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: 29.375rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 23.375rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 20rem;
   }
 }

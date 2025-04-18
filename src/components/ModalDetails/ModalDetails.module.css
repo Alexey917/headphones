@@ -17,18 +17,18 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 25px;
+  padding: 1.5625rem;
   background-color: #fff;
-  width: 600px;
-  border-radius: 30px;
+  width: 37.5rem;
+  border-radius: 1.875rem;
   z-index: 3;
 }
 
 .img {
   align-self: center;
-  width: 250px;
-  height: 250px;
-  margin-bottom: 30px;
+  width: 15.625rem;
+  height: 15.625rem;
+  margin-bottom: 1.875rem;
 }
 
 .info {
@@ -38,7 +38,7 @@
 }
 
 .infoItem {
-  margin-bottom: 15px;
+  margin-bottom: .9375rem;
 }
 
 .text {
@@ -46,7 +46,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 15px;
+  font-size: .9375rem;
   color: #1C1C27;
 }
 
@@ -57,22 +57,35 @@
 
 .btnClose {
   position: absolute;
-  right: 25px;
-  top: 25px;
-  width: 35px;
-  height: 35px;
+  right: 1.5625rem;
+  top: 1.5625rem;
+  width: 2.1875rem;
+  height: 2.1875rem;
   border: none;
   background-color: #fff;
   cursor: pointer;
 }
 
 .close {
-  width: 35px;
-  height: 35px;
+  width: 2.1875rem;
+  height: 2.1875rem;
 }
 
 @media (min-width: 992px) {
   .close:hover {
     fill: #FFA542;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .content {
+    width: 36rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    width: 23.4375rem;
   }
 }

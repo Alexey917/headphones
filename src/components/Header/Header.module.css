@@ -1,12 +1,12 @@
 .header {
-  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 25px 15px 0;
+  padding: .9375rem 1.5625rem .9375rem 0;
 }
 
 .listLinks {
@@ -16,19 +16,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 25px;
+  gap: 1.5625rem;
 }
 
 
 .favorites {
-  width: 22px;
-  height: 20px;
+  width: 1.375rem;
+  height: 1.25rem;
   fill: #838383;
 }
 
 .basket {
-  width: 23px;
-  height: 23px;
+  width: 1.4375rem;
+  height: 1.4375rem;
   fill: #838383;
 }
 
@@ -41,10 +41,10 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: -6px;
-  left: 14px;
-  width: 17px;
-  height: 17px;
+  top: -.375rem;
+  left: .875rem;
+  width: 1.0625rem;
+  height: 1.0625rem;
   border-radius: 50%;
   background-color: #FFA542;
 }
@@ -54,17 +54,17 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 15px;
+  font-size: .9375rem;
   color: #FFFFFF;
 }
 
 @media (min-width: 992px) {
   .favorites:hover, .basket:hover{
-    transform: translateY(-5px);
+    transform: translateY(-.3125rem);
     fill: #FFA542;
   }
 
   .favoritesRelative:hover .quantityFavorites, .basketRelative:hover .quantityBasket {
-    transform: translateY(-5px);
+    transform: translateY(-.3125rem);
   }
 }

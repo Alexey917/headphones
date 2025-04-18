@@ -2,15 +2,16 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  columns: 2 auto;
+  -moz-columns: 2 auto;
+       columns: 2 auto;
 }
 
 .footerLinks > li {
-  margin-bottom: 10px;
+  margin-bottom: .625rem;
 }
 
 .footerLinks > li:last-child {
-  margin-top: 35px;
+  margin-top: 2.1875rem;
 }
 
 .languageSettings {
@@ -26,14 +27,14 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 17px;
+  font-size: 1.0625rem;
   text-decoration: none;
   color: #000000;
 }
 
 .lang {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   fill: #838383;
 }
 
@@ -42,7 +43,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 15px;
+  font-size: .9375rem;
   color: #101010;
   border: none;
   background-color: #fff;
@@ -60,5 +61,25 @@
 
   .footerLink:hover {
     color: #FFA542;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerLinks {
+    align-self: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .footerLinks {
+    -moz-columns: 1 auto;
+         columns: 1 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 20rem;
   }
 }

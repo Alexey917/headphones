@@ -1,11 +1,15 @@
 import { ButtonPay } from "../UI/ButtonPay/ButtonPay";
 import classes from "./TotalSum.module.css";
+import { useClearSession } from "../../hooks/useClearBasket";
 
 interface ITotalSum {
   total: number;
+  sessionKeys: string[];
 }
 
-export const TotalSum: React.FC<ITotalSum> = ({ total }) => {
+export const TotalSum: React.FC<ITotalSum> = ({ total, sessionKeys }) => {
+  const clearSession = useClearSession();
+
   return (
     <div className={classes.totalWrapper}>
       <div className={classes.priceWrapper}>
@@ -15,6 +19,8 @@ export const TotalSum: React.FC<ITotalSum> = ({ total }) => {
       <ButtonPay
         children={<span className={classes.btnText}>Перейти к оформлению</span>}
         path="/pay/formOfPayment"
+        disabled={sessionKeys.length > 0 ? false : true}
+        handleBtn={clearSession}
       />
     </div>
   );

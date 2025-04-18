@@ -1,10 +1,8 @@
 import { Logo } from "../UI/Logo/Logo"
 import { Link } from "react-router-dom";
 import classes from "./Header.module.css";
-
 import favorites from "../../assets/sprite.svg";
 import basket from "../../assets/sprite.svg";
-
 import { QuantityPurchasesContext } from "../../context/QuantityPurchasesContext";
 import { useContext } from "react";
 

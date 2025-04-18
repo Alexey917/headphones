@@ -1,10 +1,10 @@
 .btn {
   position: absolute;
   width: inherit;
-  height: 65px;
+  height: 4.0625rem;
   bottom: 0;
-  margin-bottom: -6px;
-  border-radius: 20px;
+  margin-bottom: -.375rem;
+  border-radius: 1.25rem;
   border: none;
   background-color: #101010;
   cursor: pointer;
@@ -12,7 +12,7 @@
 
 .btnPay {
   position: static;
-  width: 300px;
+  width: 18.75rem;
 }
 
 @media (min-width: 992px) {

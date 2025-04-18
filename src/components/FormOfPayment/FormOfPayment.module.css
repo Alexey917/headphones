@@ -1,13 +1,14 @@
 .form {
-  width: 349px;
-  height: 400px;
-  padding: 25px;
+  margin-bottom: 3rem;
+  width: 21.8125rem;
+  height: 25rem;
+  padding: 1.5625rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 50px;
-  border-radius: 30px;
+  gap: 3.125rem;
+  border-radius: 1.875rem;
   background-color: #fff;
 }
 
@@ -18,23 +19,23 @@
 }
 
 .input {
-  padding: 0 10px;
-  margin-top: 10px;
-  width: 300px;
-  height: 40px;
-  border-radius: 10px;
-  border: 1px solid #1C1C27;
+  padding: 0 .625rem;
+  margin-top: .625rem;
+  width: 18.75rem;
+  height: 2.5rem;
+  border-radius: .625rem;
+  border: .0625rem solid #1C1C27;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 15px;
+  font-size: .9375rem;
   background-color: #fff;
   color: #1C1C27;
   outline: transparent;
 }
 
 .input:focus {
-  border: 2px solid #FFCE7F;
+  border: .125rem solid #FFCE7F;
 }
 
 .label {
@@ -42,7 +43,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 15px;
+  font-size: .9375rem;
   color: #1C1C27;
 }
 
@@ -51,7 +52,12 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 17px;
+  font-size: 1.0625rem;
   color: #ffffff;
 }
 
+@media (max-width: 375px) {
+  .form {
+    width: 20rem;
+  }
+}

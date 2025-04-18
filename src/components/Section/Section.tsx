@@ -92,7 +92,7 @@ export const Section: React.FC<ISection> = ({
             ))}
         </div>
 
-        {component && <TotalSum total={total} />}
+        {component && <TotalSum total={total} sessionKeys={sessionKeys} />}
       </div>
     </section>
   );

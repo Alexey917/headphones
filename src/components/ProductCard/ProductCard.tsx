@@ -5,9 +5,8 @@ import star from "../../assets/sprite.svg";
 import details from "../../assets/sprite.svg";
 import { Button } from "../UI/Button/Button";
 import { useState } from "react";
-import { useContext } from "react";
-import { QuantityPurchasesContext } from "../../context/QuantityPurchasesContext";
 import { ModalDetails } from "../ModalDetails/ModalDetails";
+import { useAddBasketIGoods } from "../../hooks/useAddBasket";
 
 interface IProductCard {
   good: IGoods<ISpecifications>;
@@ -16,20 +15,7 @@ interface IProductCard {
 
 export const ProductCard: React.FC<IProductCard> = ({ good, showOldPrice }) => {
   const [isModal, setIsModal] = useState<boolean>(false);
-  const [purchases, setPurchases] = useState<IGoods<ISpecifications>[]>([]);
-  const { quantity, setQuantity } = useContext(QuantityPurchasesContext);
-
-  const addBasket = (): void => {
-    if (sessionStorage.getItem(`purchases_${good.img}`)) {
-      alert("Товар уже в корзине!");
-      return;
-    }
-
-    const buy = [...purchases, good];
-    sessionStorage.setItem(`purchases_${good.img}`, JSON.stringify(good));
-    setPurchases(buy);
-    setQuantity(quantity + 1);
-  };
+  const addBasket = useAddBasketIGoods(good);
 
   return (
     <>
@@ -87,9 +73,7 @@ export const ProductCard: React.FC<IProductCard> = ({ good, showOldPrice }) => {
           </div>
         </div>
       </div>
-      {isModal && (
-        <ModalDetails good={good} isModal={isModal} setIsModal={setIsModal} />
-      )}
+      {isModal && <ModalDetails good={good} setIsModal={setIsModal} />}
     </>
   );
 };

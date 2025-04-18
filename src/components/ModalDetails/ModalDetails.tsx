@@ -5,17 +5,18 @@ import close from "../../assets/sprite.svg";
 
 interface IDetails {
   good: IGoods<ISpecifications>;
-  isModal: boolean;
   setIsModal: (bool: boolean) => void;
 }
 
-export const ModalDetails: React.FC<IDetails> = ({
-  good,
-  isModal,
-  setIsModal,
-}) => {
+export const ModalDetails: React.FC<IDetails> = ({ good, setIsModal }) => {
+  const overlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      setIsModal(false);
+    }
+  };
+
   return (
-    <div className={classes.overlay}>
+    <div className={classes.overlay} onClick={overlayClick}>
       <div className={classes.content}>
         <button className={classes.btnClose} onClick={() => setIsModal(false)}>
           <svg className={classes.close}>

@@ -1,22 +1,22 @@
 .purchase {
   display: flex;
   justify-content: space-between;
-  width: 633px;
-  height: 218px;
-  padding: 18px 28px 15px 19px;
+  width: 39.5625rem;
+  height: 13.625rem;
+  padding: 1.125rem 1.75rem .9375rem 1.1875rem;
   background-color: #fff;
-  border-radius: 30px;
+  border-radius: 1.875rem;
 }
 
 .imgWrapper {
   display: flex;
   flex-direction: column;
-  gap: 19px;
+  gap: 1.1875rem;
 }
 
 .img {
-  width: 147px;
-  height: 136px;
+  width: 9.1875rem;
+  height: 8.5rem;
 }
 
 .btnWrapper {
@@ -33,18 +33,18 @@
 }
 
 .del {
-  width: 20px;
-  height: 17px;
+  width: 1.25rem;
+  height: 1.0625rem;
   text-align: right;
 }
 
 .title {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: .75rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 17px;
+  font-size: 1.0625rem;
   color: #1C1C27;
 }
 
@@ -53,7 +53,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 15px;
+  font-size: .9375rem;
   color: #AAAAAA;
 }
 
@@ -62,13 +62,13 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 15px;
+  font-size: .9375rem;
   color: #1C1C27;
 }
 
 .titleWrapper {
   align-self: center;
-  margin-left: 24px;
+  margin-left: 1.5rem;
   flex-grow: 2;
 }
 
@@ -83,8 +83,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   border-radius: 50%;
   border: none;
   background-color: #FFCE7F;
@@ -96,28 +96,94 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 17px;
+  font-size: 1.0625rem;
   color: #000000;
 }
 
 .plus {
-  width: 14px;
-  height: 14px;
+  width: .875rem;
+  height: .875rem;
 }
 
 .minus {
-  width: 14px;
-  height: 2px;
+  width: .875rem;
+  height: .125rem;
 }
 
 @media (min-width: 992px) {
   .del:hover {
-    transform: translateY(-5px);
+    transform: translateY(-.3125rem);
     transition: 0.5s;
   }
 
   .btnQuantity:hover {
     transform: rotateX(180deg);
     transition: 1s;
+  }
+}
+
+@media (max-width: 768px) {
+  .purchase {
+    width: 36rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .purchase {
+    width: 23.4375rem;
+  }
+
+  .img {
+    width: 8.1875rem;
+    height: 7.5rem;
+  }
+
+  .totalPrice {
+    margin-left: -1.2rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: .8375rem;
+  }
+
+  .quantity {
+    font-size: 1rem;
+  }
+  
+  .btnQuantity {
+    width: 1.675rem;
+    height: 1.675rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .purchase {
+    flex-direction: column;
+    width: 20rem;
+    height: 22.625rem;
+  }
+
+  .imgWrapper {
+    align-items: center;
+  }
+
+  .btnWrapper {
+    gap: 1.5rem;
+  }
+
+  .titleWrapper {
+    margin-top: 3rem;
+  }
+
+  .price {
+    text-align: center; 
+  }
+
+  .priceWrapper {
+    flex-direction: row;
   }
 }

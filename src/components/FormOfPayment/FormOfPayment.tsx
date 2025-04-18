@@ -1,8 +1,11 @@
 import { Form } from "react-router-dom"
 import classes from "./FormOfPayment.module.css"
 import { ButtonPay } from "../UI/ButtonPay/ButtonPay";
+import { useClearSession } from "../../hooks/useClearBasket";
 
 export const FormOfPayment = () => {
+  const clearSession = useClearSession();
+
   return (
     <Form method="post" action="/pay" className={classes.form}>
       <fieldset className={classes.fieldset}>
@@ -20,6 +23,7 @@ export const FormOfPayment = () => {
       </fieldset>
       <ButtonPay
         children={<span className={classes.btnText}>Заказать</span>}
+        handleBtn={clearSession}
         path="/success"
       />
     </Form>
