@@ -87,7 +87,9 @@ export const ProductCard: React.FC<IProductCard> = ({ good, showOldPrice }) => {
           </div>
         </div>
       </div>
-      {isModal && <ModalDetails good={good} />}
+      {isModal && (
+        <ModalDetails good={good} isModal={isModal} setIsModal={setIsModal} />
+      )}
     </>
   );
 };
