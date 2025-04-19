@@ -7,6 +7,7 @@ import { Purchases } from "../Purchases/Purchases";
 import { TotalSum } from "../TotalSum/TotalSum";
 import { useContext } from "react";
 import { QuantityPurchasesContext } from "../../context/QuantityPurchasesContext";
+import { useArraySum } from "../../hooks/useArraySum";
 
 interface IMainSection {
   title?: string;
@@ -31,19 +32,11 @@ export const Section: React.FC<ISection> = ({
   component,
 }) => {
   const { quantity, setQuantity } = useContext(QuantityPurchasesContext);
-  const [sumArr, setSumArr] = useState<number[]>([]);
+  const { sumArr, setSumArr, arraySum } = useArraySum();
   const [sessionKeys, setSessionKeys] = useState<string[]>(
     Object.keys(sessionStorage)
   );
   const [total, setTotal] = useState<number>(0);
-
-  const arraySum = (index: number) => (newSum: number) => {
-    setSumArr((prev) => {
-      const newArr = [...prev];
-      newArr[index] = newSum;
-      return newArr;
-    });
-  };
 
   useEffect(() => {
     setTotal(sumArr.reduce((acc, item) => acc + (item || 0), 0));
@@ -61,7 +54,7 @@ export const Section: React.FC<ISection> = ({
 
     setSumArr((prev) => {
       const newArr = [...prev];
-      newArr.splice(index, 1); // Удаляем элемент по индексу
+      newArr.splice(index, 1);
       return newArr;
     });
   };

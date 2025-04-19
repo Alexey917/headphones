@@ -73,6 +73,7 @@ export const FooterLinks: React.FC<ILang> = ({ ru, eng, kaz }) => {
               <use href={lang + "#lang"}></use>
             </svg>
           </li>
+
           <li>
             <button
               type="button"

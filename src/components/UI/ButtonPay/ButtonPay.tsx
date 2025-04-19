@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import classes from "./ButtonPay.module.css"
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 interface IButtonPay {
   path: string;
@@ -15,8 +15,8 @@ export const ButtonPay: React.FC<IButtonPay> = ({
   children,
   disabled,
 }) => {
-  const navigate = useNavigate();
   const location = useLocation();
+
   return (
     <button
       type="button"
