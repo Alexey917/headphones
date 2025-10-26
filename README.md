@@ -28,10 +28,9 @@
 
 1.  Клонируйте репозиторий:
     ```bash
-    [git clone https://github.com/Alexey917/neobank.git](https://github.com/Alexey917/headphones.git)
+    https://github.com/Alexey917/headphones.git
     ```
-    ```
-3.  Установите зависимости и запустите проект:
+2.  Установите зависимости и запустите проект:
     ```bash
     npm install
     npm start
