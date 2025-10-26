@@ -1,46 +1,51 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Headphones
 
-## Available Scripts
+Тестовое задание от Neoflex. Две страницы интернет магазина аудио аксессуаров. Первая страница – каталог товаров, вторая – корзина с приобретенными 
+товарами. 
 
-In the project directory, you can run:
 
-### `npm start`
+## Ключевые особенности и решения
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+*   **Полный цикл оформления заявки:** Реализована сложная бизнес-логика, включая Prescoring, выбор кредитного предложения, Scoring, работу с документами и финальное подтверждение. Прогресс пользователя сохраняется с помощью **Redux Toolkit** и `localStorage`.
+*   **Управление состоянием:** Для управления UI (табы, модальные окна) и данными заявки использован **Redux Toolkit**.
+*   **Интерактивный UI:** Адаптивный интерфейс, кастомные слайдеры, связанные формы (ползунок/input), аккордеон, валидация форм через **react-hook-form**.
+*   **Интеграция с API:** Получение актуальных курсов валют с внешнего сервиса, новостей, взаимодействия с бэкендом на всех этапах заявки.
+*   **Надежность:** Покрытие ключевых компонентов тестами (**React Testing Library**), обработка ошибок (404, невалидные данные), защита маршрутов.
+*   
+*   **React Router:** Реализован удобный и масштабируемый роутинг, переход с корзины обратно домой (через logo)
+*   **Отзывчивый интерфейс:** Все элементы ссылок, иконок, должны отзываются при наведении на них. Есть переход на соц. сети по икнокам и вызов номера.
+*   
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Технологический стек
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*   **Frontend:** React, TypeScript
+*   **Стилизация:** CSS modules
+*   **Роутинг:** React Router
 
-### `npm run build`
+## Локальный запуск проекта
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+git clone [(https://github.com/Alexey917/neobank.git)](https://github.com/Alexey917/neobank.git)
+cd my-app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Запуск фронта
+npm install && npm run dev
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Запуск бэканда
+1. устанавливаем docker desktop
+2. скачиваем docker file для запуска backend - [docker-compose.yaml](my-app/Docker-compose.yaml)
+3. командой docker-compose up – build запускается основной контейнер.
+4. после скачивания и запуска контейнера по адресу - localhost:8080/swagger-ui/index.html откроется swagger, где можно смотреть все доступные API методы.
 
-### `npm run eject`
+Если не открывается swagger или backed выдаёт 500 ошибку или проблемы с docker:
+    Зайти в docker desktop удалить все containers, после удалить все images
+    Перезагрузить docker и заново всё собрать
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Контакты
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Вы можете связаться со мной через следующие платформы:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<a href="https://vk.com/id321802975"><img src="https://github.com/Alexey917/Alexey917/blob/main/assets/vk.png" width="32" height="32" /></a>
+<a href="https://t.me/Alexey917"><img src="https://github.com/Alexey917/Alexey917/blob/main/assets/tg.png" width="32" height="32" /></a>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
